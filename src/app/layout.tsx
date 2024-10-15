@@ -1,19 +1,9 @@
+"use client";
+
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import AppProvider from "@/components/AppProvider";
 import DashboardLayout from "@/components/Layouts/DashboardLayout";
-
-const geistSans = localFont({
-  src: "../assets/fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "../assets/fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Keeper",
@@ -27,9 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="antialiased bg-light-background dark:bg-dark-background text-light-foreground dark:text-dark-foreground">
         <AppProvider>
           <DashboardLayout>{children}</DashboardLayout>
         </AppProvider>
