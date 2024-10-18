@@ -7,7 +7,7 @@ import { ThemeProvider } from "next-themes";
 
 const AppProvider = ({ children }: { children: React.ReactNode }) => {
   return (
-    <ThemeProvider>
+    <ThemeProvider attribute="class">
       <Provider store={store}>{children}</Provider>
     </ThemeProvider>
   );
