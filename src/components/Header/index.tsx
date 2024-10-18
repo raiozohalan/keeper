@@ -1,12 +1,19 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import React from "react";
 import ThemeSelector from "../Base/ThemeSelector";
+import classNames from "@/helpers/classNames";
 
 const Header = () => {
   return (
-    <div className="flex-none w-full h-14 sticky top-0 bg-light- z-50 px-8 py-3 dark:bg-dark-primary">
+    <div
+      className={classNames(
+        "flex-none flex justify-between w-full h-14",
+        "sticky top-0 z-50 px-8 py-3",
+        "bg-light-primary dark:bg-dark-primary"
+      )}
+    >
       <div className="flex gap-2 items-center">
         <div className="w-8 h-8 rounded-md overflow-hidden">
           <Image
