@@ -13,4 +13,18 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Defaults */
+  .def-bg-hover:hover {
+    @apply bg-light-accent/10 dark:bg-dark-accent/10;
+  }
+
+  .def-text-color {
+    @apply text-light-accent dark:text-dark-accent;
+  }
+
+  .def-underline-hover:hover {
+    @apply underline underline-offset-4;
+  }
+
 }

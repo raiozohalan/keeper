@@ -4,6 +4,8 @@ import Image from "next/image";
 import React from "react";
 import ThemeSelector from "../Base/ThemeSelector";
 import classNames from "@/helpers/classNames";
+import { Sidebar } from "react-feather";
+import BaseButton from "../Base/Button";
 
 const Header = () => {
   return (
@@ -28,6 +30,9 @@ const Header = () => {
       </div>
       <div className="flex gap-2 items-center">
         <ThemeSelector />
+        <BaseButton size="md" color="warning">
+          <Sidebar className="rotate-180 w-[18px] h-[18px]" /> qeqwe
+        </BaseButton>
       </div>
     </div>
   );

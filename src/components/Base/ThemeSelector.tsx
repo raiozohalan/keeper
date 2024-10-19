@@ -22,12 +22,9 @@ const ThemeSelector = () => {
 
   return (
     <BasePopover
-      label={
-        <span className="w-1 h-1 ">
-          {getCurrentTheme?.icon}
-        </span>
-      }
-      panelProps={{ anchor: "bottom end", className: "w-fit" }}
+      label={<span className="w-[18px] h-[18px]">{getCurrentTheme?.icon}</span>}
+      buttonProps={{ variant: "icon", size: "xs" }}
+      panelProps={{ anchor: { to: "bottom end", gap: 10 }, className: "w-fit" }}
     >
       {themes.map((theme) => {
         const isCurrentTheme = theme.value === currenTheme;
@@ -35,7 +32,7 @@ const ThemeSelector = () => {
           <BasePopoverItem
             key={theme.value}
             onClick={() => setTheme(theme.value)}
-            disabled={isCurrentTheme}
+            isActived={isCurrentTheme}
           >
             <span className="w-3.5 h-3.5">{theme.icon}</span> {theme.name}
           </BasePopoverItem>
