@@ -37,6 +37,8 @@ const PopoverItem = forwardRef(
   }
 );
 
+PopoverItem.displayName = "PopoverItem";
+
 const BasePopoverItem = forwardRef(
   (props: BasePopoverItemsProps, ref: ForwardedRef<HTMLButtonElement>) => {
     const { children, autoClose = true, ...restProps } = props;
@@ -55,5 +57,6 @@ const BasePopoverItem = forwardRef(
     );
   }
 );
+BasePopoverItem.displayName = "BasePopoverItem";
 
 export default BasePopoverItem;

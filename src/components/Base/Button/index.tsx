@@ -69,5 +69,5 @@ const BaseButton = forwardRef(
     );
   }
 );
-
+BaseButton.displayName = "BaseButton";
 export default BaseButton;
