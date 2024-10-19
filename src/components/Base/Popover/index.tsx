@@ -7,15 +7,19 @@ import {
   PopoverProps,
 } from "@headlessui/react";
 import React, { useMemo } from "react";
+import BaseButton from "../Button";
+import { BaseButtonProps } from "../Button/baseButton";
 
 interface BasePopoverProps extends PopoverProps {
   label: string | React.ReactNode;
   children: React.ReactNode;
   panelProps?: Partial<PopoverPanelProps & { className: string }>;
+  buttonProps?: Partial<BaseButtonProps>;
 }
 
 const BasePopover = (props: BasePopoverProps) => {
-  const { label, children, panelProps, ...resPopoverProps } = props;
+  const { label, children, panelProps, buttonProps, ...resPopoverProps } =
+    props;
 
   // Anchor props
   // If anchor is a string, it will be converted to object and set the default values
@@ -47,7 +51,9 @@ const BasePopover = (props: BasePopoverProps) => {
 
   return (
     <Popover {...resPopoverProps}>
-      <PopoverButton>{label}</PopoverButton>
+      <PopoverButton as={BaseButton} {...buttonProps}>
+        {label}
+      </PopoverButton>
       <PopoverPanel
         {...panelProps}
         anchor={anchorProps}
