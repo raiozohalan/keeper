@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased bg-light-background dark:bg-dark-background text-light-foreground dark:text-dark-foreground">
+      <body className="antialiased text-light-accent dark:text-dark-accent">
         <AppProvider>
           <DashboardLayout>{children}</DashboardLayout>
         </AppProvider>
